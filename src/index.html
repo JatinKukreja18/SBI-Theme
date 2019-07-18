@@ -237,5 +237,72 @@
                 <b class="boldest">text inside < b > tag</b>
                 <span>b.boldest</span>
             </div>
+            
+            <div class="sample">
+                <h4>Modal sample with modal footer</h4>
+                <a href="#welcome" class="sbi-link">Welcome modal</a>
+                    <div id="welcome" class="modal " role="dialog" >
+                            <div class="modal-body text-center noPadding">
+                                <div class="modal-padding-wrapper">
+                                    <img src="./assets/images/welcome.png" style="max-width:100%;width: 274px;" alt="">
+                                    <h2 class="modal-heading">Hi Vikramaditya! <br> Welcome to SBI Card</h2>
+                                    <p  class="modal-content">With SBI Card, you enjoy the freedom to manage your Credit Card.
+                                        <br>
+                                        Complete the onboarding journey in few simple steps to learn about your Credit Card and configure its settings to suit your needs.
+                                    </p> 
+                                    <div class="flex flex-ac flex-jc flex-col button-modal-space">
+                                        <!-- <a href="#knowMore" class="underlined">Know more</a> -->
+                                        <button class="sbi-button full-xs primary noMargin" onClick="window.location.hash = ''" id="onboarded-button">Get Started</button>
+                                        <!-- <a href="#skipOnboarding" class="underlined">Skip onboarding for now</a> -->
+                                    </div>
+                                </div>
+                                <div class="modal-footer text-center">
+                                        <p class="sbi-subtext black">
+                                            SBI Card, its employees /authorized representatives never seek your confidential card account details such as Card Number/Expiry date/CVV/OTP/Passwords. 
+                                            Do not share or input any credit card details as these may be misused for Fraudulent activities for which the liability will rest with you.
+                                        </p>
+                                    </div>
+                            </div>
+                        </div>
+                        <h4>Modal sample without modal footer</h4>
+                        <a href="#skipOnboarding" class="sbi-link">Leaving modal</a>
+                        <div id="skipOnboarding" class="modal " role="dialog" >
+                                <div class="modal-body text-center">
+                                        <img src="./assets/images/leaving-gif.gif"   alt="">
+                              
+                                <h2 class="modal-heading subheading">Leaving Already?</h2>
+                                <p  class="modal-content ">
+                                        You can come back any time to complete the onboarding by clicking ‘Digital Onboarding’ from your dashboard.
+                                </p>
+                                <div class="flex flex-ac flex-jc flex-col">
+                                    <button class="sbi-button primary full-xs button-modal-space" onClick="window.location.hash = ''" >I’ll do it later</button>
+                                    <a href="#" class="underlined">I want to continue</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>OTP Modal</h4>
+                        <a href="#generateOtp" class="sbi-link">OTP modal link</a>
+                        <div id="generateOtp" class="modal " role="dialog" >
+                                <div class="modal-body text-center">
+                                    <h2 class="modal-heading">One Time Verification</h2>
+                                    <p  class="modal-content">Enter the six digit code sent on your mobile number 
+                                        <br>
+                                            <span class="text-blue">+91 9650585010</span>
+                                    </p> 
+                                    <div class="flex flex-ac flex-jc flex-col">
+                                            <label for="sbi-terms" class="sbi-input-label sbi-split-input" id="otp-input">
+                                                <input type="text" name="" id="" maxlength="6" required onKeyUp="validateOtp(this)" onkeypress='return event.charCode >= 48 && event.charCode <= 57'    >
+                                                <svg height="2px" width="100%">
+                                                <line x1="0" y1="0" x2="200" y2="0" style="stroke:#8a8a96;stroke-width:2;stroke-dasharray:18px" />
+                                                </svg>
+                                            </label>
+                                              
+                                        <a class="underlined space-top-40">Resend Code</a>
+                                        <a href="#" class="underlined space-top-40">Cancel</a>
+                                    </div>
+                                </div>
+                            </div>
+            </div>
 </body>
 </html>
