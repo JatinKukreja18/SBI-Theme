@@ -1302,7 +1302,7 @@ input[type=number]::-webkit-outer-spin-button {
   display: inline-block;
   width: 100%;
   margin-bottom: 50px; }
-  .sample span {
+  .sample >span {
     display: block;
     color: #505050;
     font-style: italic; }
