@@ -1,3 +1,4 @@
+import "../stylesheets/sbi-theme.scss";
 /************* Password Strength Check ****************/
 $(function(){	
 	$('.sbi-input-password input').keyup(function(){

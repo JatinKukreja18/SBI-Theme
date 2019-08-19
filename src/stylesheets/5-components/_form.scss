@@ -140,6 +140,7 @@ $md-checkbox-label-padding: .75em;
 
 .md-checkbox {
   position: relative;
+  z-index: 0;
   margin: $md-checkbox-margin;
   text-align: left;
   padding-left: 30px;
