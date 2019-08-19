@@ -70,8 +70,18 @@ input[type=number]::-webkit-outer-spin-button {
     &.space-top{
         margin-top: 40px;
     }
+    
 }
-
+.sbi-button.outlined.rounded{
+  border-radius: 50%;
+  height: 56px;
+  width: 56px;
+}
+.sbi-button.primary.rounded{
+  border-radius: 50%;
+  height: 56px;
+  width: 56px;
+}
 .space-top-40{
   margin-top: 40px;
 }
@@ -112,6 +122,7 @@ input[type=number]::-webkit-outer-spin-button {
         height: 0px;
     }
 }
+
 // Checkbox
 $md-checkbox-checked-color: rgb(51, 122, 183);
 $md-checkbox-border-color: rgba(0, 0, 0, 0.54);
@@ -248,7 +259,7 @@ $md-checkbox-label-padding: .75em;
     &:focus{
       border-color: $text-color;
     }
-    &:focus,&:not(:invalid){
+    &:focus,&.touched{
       +.placeholder{
       position: absolute;
       top: -16px;
@@ -256,11 +267,8 @@ $md-checkbox-label-padding: .75em;
       color: $mid-grey;
       }
     }
-    &:invalid:not(:required){
+    &.dirty:invalid{
       +.placeholder{
-        position: absolute;
-        top: -16px;
-        font-size: 10px;
         color: red;
         }
     }
@@ -288,7 +296,24 @@ $md-checkbox-label-padding: .75em;
     width: 100%;
   }
 }
-
+/** Password strength **/
+.sbi-input-text .strength{
+  font-size: 11px;
+  margin-bottom: 10px;
+  color: #8a8a96;
+  }
+  .sbi-input-text .strength span{
+  margin-left: 5px;
+  }
+  .sbi-input-text .strength .red{
+  color: #f74747;
+  }
+  .sbi-input-text .strength .yellow{
+  color: #ebb73a;
+  }
+  .sbi-input-text .strength .green{
+  color: #26b515;
+  } 
 
 // mobile
 @media (max-width: $screen-sm-max) {

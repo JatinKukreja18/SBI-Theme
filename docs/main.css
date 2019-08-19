@@ -440,10 +440,15 @@ p {
 h4, h5, h6 {
   font: 600 14px "Open Sans", sans-serif; }
 
-a, a:hover {
+a, a:hover, .sbi-link {
   cursor: pointer;
   font: 400 14px "Open Sans", sans-serif;
   color: #00b1f2; }
+
+.sbi-link.gray {
+  color: #8a8a96; }
+  .sbi-link.gray.active {
+    color: #00b1f2; }
 
 .sbi-heading {
   font-size: 22px;
@@ -461,6 +466,9 @@ a, a:hover {
   color: #8a8a96; }
   .sbi-subtext.black {
     color: #2d2d2d; }
+
+.sbi-small-text {
+  font: 400 10px "Open Sans", sans-serif; }
 
 .sbi-text {
   font-size: 14px;
@@ -583,8 +591,15 @@ a, a:hover {
 .underlined {
   text-decoration: underline; }
 
+.sbi-pos-rel {
+  position: relative; }
+
 .noMargin {
   margin: 0px; }
+
+.autoMargin {
+  margin-left: auto;
+  margin-right: auto; }
 
 .sm-hidden {
   display: inherit; }
@@ -601,6 +616,14 @@ b {
     font-weight: 600; }
   b.boldest {
     font-weight: 700; }
+
+.sbi-illus {
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.sbi-illus img {
+  width: 100%; }
 
 @media (max-width: 767px) {
   .sm-hidden {
@@ -984,6 +1007,16 @@ input[type=number]::-webkit-outer-spin-button {
   .sbi-button-group.space-top {
     margin-top: 40px; }
 
+.sbi-button.outlined.rounded {
+  border-radius: 50%;
+  height: 56px;
+  width: 56px; }
+
+.sbi-button.primary.rounded {
+  border-radius: 50%;
+  height: 56px;
+  width: 56px; }
+
 .space-top-40 {
   margin-top: 40px; }
 
@@ -1095,15 +1128,12 @@ input[type=number]::-webkit-outer-spin-button {
     width: 100%; }
     .sbi-input-text input:focus {
       border-color: #2d2d2d; }
-    .sbi-input-text input:focus + .placeholder, .sbi-input-text input:not(:invalid) + .placeholder {
+    .sbi-input-text input:focus + .placeholder, .sbi-input-text input.touched + .placeholder {
       position: absolute;
       top: -16px;
       font-size: 10px;
       color: #8a8a96; }
-    .sbi-input-text input:invalid:not(:required) + .placeholder {
-      position: absolute;
-      top: -16px;
-      font-size: 10px;
+    .sbi-input-text input.dirty:invalid + .placeholder {
       color: red; }
     .sbi-input-text input:focus + .placeholder {
       color: #00b1f2; }
@@ -1120,6 +1150,24 @@ input[type=number]::-webkit-outer-spin-button {
     width: 380px; }
   .sbi-input-text.full {
     width: 100%; }
+
+/** Password strength **/
+.sbi-input-text .strength {
+  font-size: 11px;
+  margin-bottom: 10px;
+  color: #8a8a96; }
+
+.sbi-input-text .strength span {
+  margin-left: 5px; }
+
+.sbi-input-text .strength .red {
+  color: #f74747; }
+
+.sbi-input-text .strength .yellow {
+  color: #ebb73a; }
+
+.sbi-input-text .strength .green {
+  color: #26b515; }
 
 @media (max-width: 767px) {
   .sbi-button-group.vertical-sm {
@@ -1302,7 +1350,7 @@ input[type=number]::-webkit-outer-spin-button {
   display: inline-block;
   width: 100%;
   margin-bottom: 50px; }
-  .sample span {
+  .sample > span {
     display: block;
     color: #505050;
     font-style: italic; }

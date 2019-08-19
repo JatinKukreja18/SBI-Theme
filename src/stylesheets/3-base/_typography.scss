@@ -11,11 +11,20 @@ p{
 h4,h5,h6{
   font: $font-semibold;
 }
-a,a:hover{
+a,a:hover,.sbi-link{
   cursor: pointer;
   font: $font-regular;
   color: $brand-color;
 }
+.sbi-link{
+  &.gray {
+    color: #8a8a96;
+    &.active{
+      color: #00b1f2;
+    }
+  }
+}
+
 
 .sbi-heading{
   font-size: 22px;
@@ -36,6 +45,9 @@ a,a:hover{
   &.black{
     color: $text-color;
   }
+}
+.sbi-small-text{
+  font: 400 10px "Open Sans", sans-serif;
 }
 .sbi-text{
   font-size: 14px;

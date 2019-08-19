@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Frontend Boilerplate</title>
+    <title>SBI THEME</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
-
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  
     <!-- <link rel="stylesheet" href="/build/main.css"/> -->
     <!-- <script src="/build/bundle.js"></script> -->
 </head>
@@ -38,8 +42,15 @@
         <div class="sample">
                 <p class="sbi-subtext">SBI body subtext</p>
                 <span>.sbi-subtext</span>
+                <br>
                 <p class="sbi-subtext black">SBI body subtext Black</p>
                 <span>.sbi-subtext.black</span>
+                <br>
+
+                <p class="sbi-small-text ">SBI small text</p>
+                <span>.sbi-small-text</span>
+                <br>
+
                 <p class="sbi-gold-text gray">SBI Gold text </p>
                 <span>.sbi-gold-text</span>
         </div>
@@ -48,10 +59,23 @@
                     link
                 </a>
                 <span>.sbi-link</span>
+                <br>
+
                 <a class="sbi-link underlined">
                         link underlined
                 </a>
                 <span>.sbi-link</span>
+                <br>
+
+                <a class="sbi-link gray">
+                    gray link /disabled link
+                </a>
+                <span>.sbi-link.gray.active</span>
+                <br>
+                <a class="sbi-link gray active">
+                    gray link activated
+                </a>
+                <span>.sbi-link.gray.active</span>
         </div>
     
         <div class="sample">
@@ -72,6 +96,12 @@
                 Outlined Button
             </button>
                 <span>.sbi-button.outlined</span>
+        </div>
+        <div class="sample">
+            <button class="sbi-button outlined rounded">
+                FB
+            </button>
+                <span>.sbi-button.outlined.rounded</span>
         </div>
 
 
@@ -138,15 +168,30 @@
             <h6>Input number/text</h6>
 
             <label for="sbi-sample2" class="sbi-input-label sbi-input-text"  id="new-pin-input">
-                    <input type="number" name="new-pin-input" id="sbi-sample2"  required>
+                    <input type="number" name="new-pin-input" id="sbi-sample2" >
                     <span class="placeholder">New Pin</span>
                 </label>
             <span>classes on label :  .sbi-input-label.sbi-input-text</span>
 
+            <h6>Input number/text</h6>
+
+            <label for="sbi-sample2" class="sbi-input-label sbi-input-text sbi-input-password "  id="new-pin-input">
+                    <input type="password" name="new-pin-input" id="sbi-sample2"  >
+                    <span class="placeholder">New Pin</span>
+                    <!-- please place strength as the last element inside this label -->
+                    <div class="strength">Strength:
+                        <span  class="strength-status red">Weak</span> 
+                    </div>
+                </label>
+
+            <span>classes on label :  .sbi-input-label.sbi-input-text.sbi-input-password </span>
+            <span>please follow the same html structure </span>
+
+
             <h6>split input for OTP</h6>
                 <div>
                 <label for="sbi-terms" class="sbi-input-label sbi-split-input" id="otp-input">
-                    <input type="text" name="" id="" maxlength="6" required onKeyUp="validateOtp(this)" onkeypress='return event.charCode >= 48 && event.charCode <= 57'    >
+                    <input type="text" name="" id="" maxlength="6"  onKeyUp="validateOtp(this)" onkeypress='return event.charCode >= 48 && event.charCode <= 57'    >
                     <svg height="2px" width="100%">
                     <line x1="0" y1="0" x2="200" y2="0" style="stroke:#8a8a96;stroke-width:2;stroke-dasharray:18px" />
                     </svg>
@@ -161,11 +206,11 @@
 
             <div class="sbi-input-group ">
                 <label for="sbi-terms" class="sbi-input-label sbi-input-text"  id="new-pin-input">
-                    <input type="number" name="new-pin-input" id=""  required onKeyUp="validatePin()">
+                    <input type="number" name="new-pin-input" id=""   onKeyUp="validatePin()">
                     <span class="placeholder">New Pin</span>
                 </label>
                 <label for="sbi-terms" class="sbi-input-label sbi-input-text" id="confirm-pin-input">
-                    <input type="number" name="confirm-pin-input" id=""required  onKeyUp="validatePin()">
+                    <input type="number" name="confirm-pin-input" id=""  onKeyUp="validatePin()">
                     <span class="placeholder">Re-enter PIN</span>
                 </label>
             </div>
@@ -174,11 +219,11 @@
             <h6>Input Groups vertical</h6>
             <div class="sbi-input-group vertical">
                 <label for="sbi-terms" class="sbi-input-label sbi-input-text"  id="new-pin-input">
-                    <input type="number" name="new-pin-input" id=""  required onKeyUp="validatePin()">
+                    <input type="number" name="new-pin-input" id=""   onKeyUp="validatePin()">
                     <span class="placeholder">New Pin</span>
                 </label>
                 <label for="sbi-terms" class="sbi-input-label sbi-input-text" id="confirm-pin-input">
-                    <input type="number" name="confirm-pin-input" id=""required  onKeyUp="validatePin()">
+                    <input type="number" name="confirm-pin-input" id=""  onKeyUp="validatePin()">
                     <span class="placeholder">Re-enter PIN</span>
                 </label>
             </div>
@@ -229,6 +274,7 @@
                 <span>.sm-hidden</span>
                 <span>.full-width</span>
                 <span>.sm-visible</span>
+                <span>.auto-margin</span>
 
             </div>
             <div class="sample">
@@ -292,7 +338,7 @@
                                     </p> 
                                     <div class="flex flex-ac flex-jc flex-col">
                                             <label for="sbi-terms" class="sbi-input-label sbi-split-input" id="otp-input">
-                                                <input type="text" name="" id="" maxlength="6" required onKeyUp="validateOtp(this)" onkeypress='return event.charCode >= 48 && event.charCode <= 57'    >
+                                                <input type="text" name="" id="" maxlength="6"  onKeyUp="validateOtp(this)" onkeypress='return event.charCode >= 48 && event.charCode <= 57'    >
                                                 <svg height="2px" width="100%">
                                                 <line x1="0" y1="0" x2="200" y2="0" style="stroke:#8a8a96;stroke-width:2;stroke-dasharray:18px" />
                                                 </svg>

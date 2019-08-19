@@ -1,1 +1,65 @@
-!function(e){var t={};function r(n){if(t[n])return t[n].exports;var o=t[n]={i:n,l:!1,exports:{}};return e[n].call(o.exports,o,o.exports,r),o.l=!0,o.exports}r.m=e,r.c=t,r.d=function(e,t,n){r.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},r.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.t=function(e,t){if(1&t&&(e=r(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)r.d(n,o,function(t){return e[t]}.bind(null,o));return n},r.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(t,"a",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p="",r(r.s=0)}([function(e,t,r){"use strict";r.r(t);r(1)},function(e,t,r){}]);
+/************* Password Strength Check ****************/
+$(function(){	
+	$('.sbi-input-password input').keyup(function(){
+		$(this.parentElement.lastElementChild.children[0]).html(checkStrength($(this).val(), this.parentElement.lastElementChild.children[0]));
+    });	
+    
+    function checkStrength(password, el){
+        //initial strength
+		var strength = 0
+		
+		//length is ok, lets continue.
+		
+		//if length is 8 characters or more, increase strength value
+		if (password.length > 5) strength += 1
+		
+		//if password contains both lower and uppercase characters, increase strength value
+		if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/))  strength += 1
+		
+		//if it has numbers and characters, increase strength value
+		if (password.match(/([a-zA-Z])/) && password.match(/([0-9])/))  strength += 1 
+		
+		//if it has one special character, increase strength value
+		if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/))  strength += 1
+		
+		//if it has two special characters, increase strength value
+		if (password.match(/(.*[!,%,&,@,#,$,^,*,?,_,~].*[!,%,&,@,#,$,^,*,?,_,~])/)) strength += 1
+		
+		//now we have calculated strength value, we can return messages
+		
+		//if value is less than 2
+		if (strength < 2 )
+		{
+            console.log(el);
+            
+			$(el).removeClass()
+			$(el).addClass('red')
+			return 'Weak'			
+		}
+		else if (strength == 2 )
+		{
+			$(el).removeClass()
+			$(el).addClass('yellow')
+			return 'Good'		
+		}
+		else
+		{
+			$(el).removeClass()
+			$(el).addClass('green')
+			return 'Strong'
+		}
+	}
+    $('.sbi-input-text input').on('focus',function(){
+        $(this).addClass('touched');
+    })
+    $('.sbi-input-text input').on('keyup',function(){
+       if($(this).val().length != 0 && !$(this).hasClass('dirty')){
+           $(this).addClass('dirty');
+       }
+    })
+    $('.sbi-input-text input').on('blur',function(){
+        if(!$(this).val()){
+            $(this).removeClass('touched');
+        }
+    })
+});

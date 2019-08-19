@@ -113,8 +113,16 @@
 .underlined{
   text-decoration: underline;
 }
+.sbi-pos-rel{
+  position: relative;
+  }
+  
 .noMargin{
   margin: 0px;
+}
+.autoMargin{
+  margin-left: auto;
+  margin-right: auto;
 }
 .sm-hidden{
   display: inherit;
@@ -134,6 +142,15 @@ b{
       font-weight: 700;
   }
 }
+.sbi-illus{
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  .sbi-illus img{
+  width: 100%;
+  }
+
 @media (max-width: $screen-sm-max) {
   .sm-hidden{
     display: none;
