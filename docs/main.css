@@ -1043,16 +1043,18 @@ input[type=number]::-webkit-outer-spin-button {
   font: 400 14px "Open Sans", sans-serif;
   cursor: pointer; }
 
-.sbi-input-checkbox input {
-  width: 0px;
-  height: 0px; }
+.sbi-input-checkbox {
+  display: flex; }
+  .sbi-input-checkbox input {
+    width: 0px;
+    height: 0px; }
 
 .md-checkbox {
   position: relative;
   z-index: 0;
   margin: 1em 0;
   text-align: left;
-  padding-left: 30px; }
+  margin-left: 30px; }
   .md-checkbox.md-checkbox-inline {
     display: inline-block; }
   .md-checkbox label:not(:empty) {
@@ -1060,7 +1062,7 @@ input[type=number]::-webkit-outer-spin-button {
   .md-checkbox label:before, .md-checkbox label:after {
     content: "";
     position: absolute;
-    left: 0;
+    left: -30px;
     top: 2px;
     z-index: -1; }
   .md-checkbox label:before {
@@ -1073,14 +1075,18 @@ input[type=number]::-webkit-outer-spin-button {
     transition: background .3s; }
   .md-checkbox input[type="checkbox"] {
     outline: 0;
-    visibility: hidden;
     width: 16px;
     margin: 0 10px 0 0;
     display: inline-flex;
     font-size: inherit;
     width: 0px;
     height: 0px;
-    margin: 0px; }
+    margin: 0px;
+    position: absolute;
+    left: -30px;
+    width: 22px;
+    height: 22px;
+    opacity: 0; }
     .md-checkbox input[type="checkbox"]:checked + label:before {
       background: #00b1f2;
       border: none; }
