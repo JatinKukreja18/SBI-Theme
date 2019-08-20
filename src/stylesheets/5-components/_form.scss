@@ -266,7 +266,7 @@ $md-checkbox-label-padding: .75em;
     &:focus{
       border-color: $text-color;
     }
-    &:focus,&.touched{
+    &:focus,&.touched,&[value=""]{
       +.placeholder{
       position: absolute;
       top: -16px;
@@ -274,6 +274,7 @@ $md-checkbox-label-padding: .75em;
       color: $mid-grey;
       }
     }
+    
     &.dirty:invalid{
       +.placeholder{
         color: red;
@@ -283,6 +284,9 @@ $md-checkbox-label-padding: .75em;
       +.placeholder{
         color: $brand-color;
       }
+    }
+    &:disabled{
+      color: #8a8a96;
     }
   }
   span.placeholder{

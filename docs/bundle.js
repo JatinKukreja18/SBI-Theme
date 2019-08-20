@@ -1,4 +1,3 @@
-
 /************* Password Strength Check ****************/
 $(function(){	
 	$('.sbi-input-password input').keyup(function(){
