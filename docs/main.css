@@ -1164,6 +1164,50 @@ input[type=number]::-webkit-outer-spin-button {
   .sbi-input-text.full {
     width: 100%; }
 
+/* radio button */
+.sbi-label-radio {
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 0;
+  margin: 0px 30px 0px 20px; }
+
+.sbi-def-radio {
+  opacity: 0;
+  position: absolute;
+  top: 0; }
+
+.sbi-radio-btn {
+  width: 14px;
+  height: 14px;
+  position: relative;
+  border: 1px solid #8a8a96;
+  border-radius: 50%; }
+
+.sbi-radio-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  background-color: #00b1f2;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  transition: 0.4s;
+  opacity: 0; }
+
+.sbi-def-radio:checked ~ .sbi-radio-btn {
+  border: 1px solid #8a8a96; }
+
+.sbi-def-radio:checked ~ .sbi-radio-btn::before {
+  opacity: 1; }
+
+.sbi-def-radio:checked ~ .sbi-radio-text {
+  font-weight: bold;
+  color: #2d2d2d; }
+
 /** Password strength **/
 .sbi-input-text .strength {
   font-size: 11px;
