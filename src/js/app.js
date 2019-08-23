@@ -64,3 +64,29 @@ $(function(){
         }
     })
 });
+// select box js
+window.addEventListener('click',function(e){
+    if(!e.target.classList.contains('sbi-select-box') && !e.target.classList.contains('select-box') ){
+        this.document.querySelector('.sbi-dropdown-select').classList.remove('selectOpen');
+    }
+})
+
+document.querySelectorAll(".sbi-select-box").forEach(function (select) {
+    select.addEventListener("click", function () {
+        this.parentNode.children[1].classList.toggle("selectOpen");
+    });
+})
+
+document.querySelectorAll('.sbi-select-box-item').forEach(function (targeting) {
+    targeting.addEventListener("click", function () {
+        document.querySelector(".selected").classList.remove("selected");
+        this.classList.add("selected");
+        document.querySelector('#' + this.parentNode.parentNode.id+ ' .sbi-input-text input').value = targeting.dataset.value;
+        document.querySelector('#' + this.parentNode.parentNode.id+ ' .sbi-input-text input').focus();
+        document.querySelector('#' + this.parentNode.parentNode.id+ ' .sbi-input-text input').classList.add('touched','dirty');
+        document.querySelector('#' + this.parentNode.parentNode.id+ ' .sbi-input-text input').onchange();
+        document.querySelector('#' + this.parentNode.parentNode.id+ ' .sbi-input-text input').blur();
+
+        this.parentNode.classList.remove("selectOpen");
+    });
+});

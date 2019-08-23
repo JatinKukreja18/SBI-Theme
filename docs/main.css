@@ -1182,6 +1182,55 @@ input[type=number]::-webkit-outer-spin-button {
 .sbi-input-text .strength .green {
   color: #26b515; }
 
+.sbi-select-box-main {
+  width: 100px;
+  /* border-bottom: 1px solid; */
+  margin: 35px 0px 40px 0px;
+  position: relative; }
+
+.sbi-select-box {
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer; }
+
+.sbi-select-box .sbi-input-label input:disabled {
+  color: #2d2d2d; }
+
+.sbi-select-box .sbi-input-label {
+  width: 100%;
+  margin: 0;
+  pointer-events: none; }
+
+.sbi-select-box .aero {
+  position: absolute;
+  right: 0px;
+  top: 2px; }
+
+.sbi-dropdown-select {
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 0 4px 0 rgba(213, 213, 234, 0.5);
+  background-color: #ffffff;
+  position: absolute;
+  width: 100%;
+  top: 30px;
+  z-index: 99;
+  padding: 0;
+  list-style-type: none;
+  margin: 0; }
+
+.sbi-dropdown-select.selectOpen {
+  height: auto;
+  overflow: hidden; }
+
+.sbi-select-box-item {
+  font-size: 15px;
+  margin-bottom: 0;
+  cursor: pointer;
+  padding: 12px 10px;
+  color: #2d2d2d; }
+
 @media (max-width: 767px) {
   .sbi-button-group.vertical-sm {
     flex-direction: column; }
