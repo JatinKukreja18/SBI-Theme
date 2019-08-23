@@ -61,9 +61,8 @@ $(function(){
         if(!$(this).val()){
             $(this).removeClass('touched');
         }
-    })
-});
-// select box js
+	})
+	// select box js
 window.addEventListener('click',function(e){
     if(!e.target.classList.contains('sbi-select-box') && !e.target.classList.contains('select-box') ){
         this.document.querySelector('.sbi-dropdown-select').classList.remove('selectOpen');
@@ -88,4 +87,5 @@ document.querySelectorAll('.sbi-select-box-item').forEach(function (targeting) {
 
         this.parentNode.classList.remove("selectOpen");
     });
+});
 });
