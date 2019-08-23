@@ -83,7 +83,7 @@ document.querySelectorAll('.sbi-select-box-item').forEach(function (targeting) {
         document.querySelector('#' + this.parentNode.parentNode.id+ ' .sbi-input-text input').value = targeting.dataset.value;
         document.querySelector('#' + this.parentNode.parentNode.id+ ' .sbi-input-text input').focus();
         document.querySelector('#' + this.parentNode.parentNode.id+ ' .sbi-input-text input').classList.add('touched','dirty');
-        document.querySelector('#' + this.parentNode.parentNode.id+ ' .sbi-input-text input').onchange();
+        // document.querySelector('#' + this.parentNode.parentNode.id+ ' .sbi-input-text input').onchange();
         document.querySelector('#' + this.parentNode.parentNode.id+ ' .sbi-input-text input').blur();
 
         this.parentNode.classList.remove("selectOpen");
