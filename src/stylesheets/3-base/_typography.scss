@@ -30,6 +30,12 @@ a,a:hover,.sbi-link{
   font-size: 22px;
   font-weight: 600;
   color: $text-color;
+  &.sbi-heading-md{
+    font-size:18px;
+  }
+  &.sbi-heading-sm{
+    font-size:16px;
+  }
 }
 .sbi-subheading{
   // font-family: OpenSans;
