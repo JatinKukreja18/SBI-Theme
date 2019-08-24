@@ -65,7 +65,7 @@ $(function(){
 	// select box js
 window.addEventListener('click',function(e){
     if(!e.target.classList.contains('sbi-select-box') && !e.target.classList.contains('select-box') ){
-        this.document.querySelector('.sbi-dropdown-select').classList.remove('selectOpen');
+       $('.sbi-dropdown-select').removeClass('selectOpen');
     }
 })
 
