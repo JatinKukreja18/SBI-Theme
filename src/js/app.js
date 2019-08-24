@@ -78,7 +78,9 @@ document.querySelectorAll(".sbi-select-box").forEach(function (select) {
 
 document.querySelectorAll('.sbi-select-box-item').forEach(function (targeting) {
     targeting.addEventListener("click", function () {
-        document.querySelector(".selected").classList.remove("selected");
+		if(document.querySelector(".selected")){
+			document.querySelector(".selected").classList.remove("selected");
+		}
         this.classList.add("selected");
         document.querySelector('#' + this.parentNode.parentNode.id+ ' .sbi-input-text input').value = targeting.dataset.value;
         document.querySelector('#' + this.parentNode.parentNode.id+ ' .sbi-input-text input').focus();
