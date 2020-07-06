@@ -757,6 +757,9 @@ b.boldest {
 }
 
 @media (max-width: 767px) {
+  .text-center-sm{
+    text-align: center;
+  }
   .sm-hidden {
     display: none;
   }
