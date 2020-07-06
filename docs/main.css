@@ -1288,6 +1288,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .sbi-button.sbi-button-large{
   height: 56px;
+  min-width: 280px;
 }
 .sbi-button.noMargin {
   margin-bottom: 0px;
