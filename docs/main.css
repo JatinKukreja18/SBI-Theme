@@ -511,6 +511,7 @@ a:hover,
   /* font-size: 22px; */
   font-weight: 600;
   color: #2d2d2d;
+  margin-top: 0;
 }
 h1.sbi-heading{
   font-size: 24px;
@@ -1373,6 +1374,22 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .space-top-10 {
+  margin-top: 10px;
+}
+/*  */
+.mb-40 {
+  margin-top: 40px;
+}
+
+.mb-30 {
+  margin-top: 30px;
+}
+
+.mb-20 {
+  margin-top: 20px;
+}
+
+.mb-10 {
   margin-top: 10px;
 }
 
