@@ -1744,6 +1744,10 @@ input[type="number"]::-webkit-outer-spin-button {
     border-radius: 50%;
     box-shadow: 0 0 5px 0 #d5d5ea; }
 @media (max-width: 767px) {
+  .sbi-button.sbi-button-large{
+    width: 100%;
+    max-width: 376px;
+  }
   .sbi-button-group.vertical-sm {
     flex-direction: column;
   }
