@@ -1249,7 +1249,7 @@ input[type="number"]::-webkit-outer-spin-button {
   box-shadow: none;
   border-radius: 34px;
   font: 600 14px "Open Sans", sans-serif;
-  width: 180px;
+  min-width: 180px;
   height: 38px;
   border: 1px solid transparent;
   margin-bottom: 20px;
