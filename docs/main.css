@@ -570,6 +570,7 @@ h6.sbi-heading{
   font-size: 14px;
   color: #2d2d2d;
 }
+.sbi-small-text.gray,
 .sbi-tiny-text.gray,
 .sbi-text.gray {
   color: #8a8a96;
@@ -759,6 +760,9 @@ b.boldest {
 }
 
 @media (max-width: 767px) {
+  .sbi-small-text{
+    font-size: 8px;
+  }
   .text-center-sm{
     text-align: center;
   }
