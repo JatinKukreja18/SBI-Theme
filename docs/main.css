@@ -508,9 +508,32 @@ a:hover,
 }
 
 .sbi-heading {
-  font-size: 22px;
+  /* font-size: 22px; */
   font-weight: 600;
   color: #2d2d2d;
+}
+h1.sbi-heading{
+  font-size: 24px;
+}
+
+h2.sbi-heading{
+  font-size: 20px;
+}
+
+h3.sbi-heading{
+  font-size: 18px;
+}
+
+h4.sbi-heading{
+  font-size: 16px;
+}
+
+h5.sbi-heading{
+  font-size: 14px;
+}
+
+h6.sbi-heading{
+  font-size: 10px;
 }
 .sbi-heading.sbi-heading-md {
   font-size: 18px;
@@ -533,7 +556,9 @@ a:hover,
 .sbi-subtext.black {
   color: #2d2d2d;
 }
-
+.sbi-tiny-text{
+  font: 400 8px "Open Sans", sans-serif;
+}
 .sbi-small-text {
   font: 400 10px "Open Sans", sans-serif;
 }
@@ -542,6 +567,7 @@ a:hover,
   font-size: 14px;
   color: #2d2d2d;
 }
+.sbi-tiny-text.gray,
 .sbi-text.gray {
   color: #8a8a96;
 }
@@ -850,6 +876,15 @@ b.boldest {
   }
   .reward-star img {
     margin: 0px;
+  }
+  h4.sbi-heading{
+    font-size: 14px;
+  }
+  h6.sbi-heading{
+    font-size: 12px;
+  }
+  .sbi-tiny-text{
+    font-size: 10px;
   }
 }
 
