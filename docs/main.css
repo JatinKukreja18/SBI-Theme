@@ -1407,6 +1407,9 @@ input[type="number"]::-webkit-outer-spin-button {
 .mb-5{
   margin-bottom: 5px;
 }
+.mb-none{
+  margin-bottom: 0;
+}
 /* Inputs */
 .sbi-input-group {
   display: flex;
