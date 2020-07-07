@@ -568,6 +568,7 @@ h6.sbi-heading{
 
 .sbi-text {
   font-size: 14px;
+  margin-top: 0;
   color: #2d2d2d;
 }
 .sbi-small-text.gray,
