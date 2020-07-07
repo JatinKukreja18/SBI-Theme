@@ -612,9 +612,9 @@ h6.sbi-heading{
   /* 2 */
   margin-right: auto;
   /* 2 */
-  padding-left: 20px;
+  padding-left: 0px;
   /* 3 */
-  padding-right: 20px;
+  padding-right: 0px;
   /* 3 */
   width: 100%;
   /* 1 */
@@ -761,6 +761,10 @@ b.boldest {
 }
 
 @media (max-width: 767px) {
+  .container{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .sbi-small-text{
     font-size: 12px;
   }
@@ -1089,8 +1093,14 @@ b.boldest {
     margin-left: 91.666667%;
   }
 }
-
+@media (min-width:768px) and (max-width: 1300px){
+  .container{
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
 @media (min-width: 768px) {
+  
   .col-md {
     flex-basis: 0;
     flex-grow: 1;
@@ -1339,7 +1349,15 @@ input[type="number"]::-webkit-outer-spin-button {
 .sbi-button.noMargin {
   margin-bottom: 0px;
 }
-
+.sbi-button.has-icon{
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    line-height: 24px;
+}
+.sbi-button.has-icon img{
+  width: 24px;
+}
 .sbi-button-group {
   display: flex;
   align-items: center;
