@@ -1096,6 +1096,12 @@ b.boldest {
     margin-left: 91.666667%;
   }
 }
+@media (min-width:768px) and (max-width: 991px){
+  .container{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
 @media (min-width:768px) and (max-width: 1300px){
   .container{
     padding-left: 60px;
