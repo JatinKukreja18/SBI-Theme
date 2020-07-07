@@ -513,6 +513,9 @@ a:hover,
   color: #2d2d2d;
   margin-top: 0;
 }
+.sbi-heading.bold{
+  font-weight: 800;
+}
 h1.sbi-heading{
   font-size: 24px;
 }
