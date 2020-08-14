@@ -1908,6 +1908,24 @@ input[type="number"]::-webkit-outer-spin-button {
   transform: scale(0);
   max-width: 590px;
 }
+.modal .modal-header{
+  background: #f2f7fd;
+  padding: 20px 60px;
+  width: 100%;
+  max-width: 590px;
+}
+.modal .modal-close svg{
+  width: 100%;
+  height: 100%;
+}
+.modal .modal-close {
+  color: #8a8a96;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
 .modal .modal-body .modal-heading {
   font: 700 14px "Open Sans", sans-serif;
   font-size: 28px;
